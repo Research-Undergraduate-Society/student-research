@@ -7,22 +7,26 @@ layout: null
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} | Academic Society</title>
-  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+  
+  <link rel="stylesheet" href="{{ 'style.css' | relative_url }}">
+  
+  <script src="{{ 'script.js' | relative_url }}"></script>
+  
 </head>
 <body>
   <nav>
     <ul>
-      <li><a href="{{ '/index.html' | relative_url }}"{% if page.url == '/' or page.url == '/index.html' %} class="active"{% endif %}>Home</a></li>
-      <li><a href="{{ '/journals.html' | relative_url }}"{% if page.url == '/journals.html' %} class="active"{% endif %}>Journals</a></li>
-      <li><a href="{{ '/newspaper.html' | relative_url }}"{% if page.url == '/newspaper.html' %} class="active"{% endif %}>Newspaper</a></li>
-      <li><a href="{{ '/physics.html' | relative_url }}"{% if page.url == '/physics.html' %} class="active"{% endif %}>Physics Undergraduate Society</a></li>
-      <li><a href="{{ '/mathematics.html' | relative_url }}"{% if page.url == '/mathematics.html' %} class="active"{% endif %}>Mathematics Undergraduate Society</a></li>
-      <li><a href="{{ '/parikrama.html' | relative_url }}"{% if page.url == '/parikrama.html' %} class="active"{% endif %}>Parikrama</a></li>
-      <li><a href="{{ '/projects.html' | relative_url }}"{% if page.url == '/projects.html' %} class="active"{% endif %}>Projects</a></li>
-      <li><a href="{{ '/members.html' | relative_url }}"{% if page.url == '/members.html' %} class="active"{% endif %}>Members</a></li>
-      <li><a href="{{ '/faculty.html' | relative_url }}"{% if page.url == '/faculty.html' %} class="active"{% endif %}>Faculty Advisors</a></li>
-      <li><a href="{{ '/contact.html' | relative_url }}"{% if page.url == '/contact.html' %} class="active"{% endif %}>Contact</a></li>
-      <li><a href="{{ '/info.html' | relative_url }}"{% if page.url == '/info.html' %} class="active"{% endif %}>Information</a></li>
+      <li><a href="{{ 'index.html' | relative_url }}"{% if page.url == '/' or page.url == '/index.html' %} class="active"{% endif %}>Home</a></li>
+      <li><a href="{{ 'journals.html' | relative_url }}"{% if page.url == '/journals.html' %} class="active"{% endif %}>Journals</a></li>
+      <li><a href="{{ 'newspaper.html' | relative_url }}"{% if page.url == '/newspaper.html' %} class="active"{% endif %}>Newspaper</a></li>
+      <li><a href="{{ 'physics.html' | relative_url }}"{% if page.url == '/physics.html' %} class="active"{% endif %}>Physics Undergraduate Society</a></li>
+      <li><a href="{{ 'mathematics.html' | relative_url }}"{% if page.url == '/mathematics.html' %} class="active"{% endif %}>Mathematics Undergraduate Society</a></li>
+      <li><a href="{{ 'parikrama.html' | relative_url }}"{% if page.url == '/parikrama.html' %} class="active"{% endif %}>Parikrama</a></li>
+      <li><a href="{{ 'projects.html' | relative_url }}"{% if page.url == '/projects.html' %} class="active"{% endif %}>Projects</a></li>
+      <li><a href="{{ 'members.html' | relative_url }}"{% if page.url == '/members.html' %} class="active"{% endif %}>Members</a></li>
+      <li><a href="{{ 'faculty.html' | relative_url }}"{% if page.url == '/faculty.html' %} class="active"{% endif %}>Faculty Advisors</a></li>
+      <li><a href="{{ 'contact.html' | relative_url }}"{% if page.url == '/contact.html' %} class="active"{% endif %}>Contact</a></li>
+      <li><a href="{{ 'info.html' | relative_url }}"{% if page.url == '/info.html' %} class="active"{% endif %}>Information</a></li>
     </ul>
   </nav>
 
@@ -34,6 +38,5 @@ layout: null
     <p>&copy; 2025 Academic Society. All rights reserved.</p>
   </footer>
 
-  <script src="{{ '/script.js' | relative_url }}"></script>
-</body>
+  </body>
 </html>
