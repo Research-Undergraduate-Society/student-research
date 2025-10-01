@@ -1,8 +1,2 @@
-# The default title for your site
 title: Academic Society
-
-# IMPORTANT: This must match your GitHub repository name
-baseurl: "/student-research"
-
-# Optional: Set the theme or other site-wide variables
-# theme: minima
+# baseurl: ""  <-- or just delete the line
