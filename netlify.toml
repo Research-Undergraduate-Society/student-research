@@ -6,7 +6,7 @@
 
 [build.environment]
   # Set the specific Ruby version compatible with Jekyll 4+
-  RUBY_VERSION = "2.7.2"
+  RUBY_VERSION = "3.2.0"
   # Set the environment to production (recommended)
   JEKYLL_ENV = "production"
 
