@@ -1,5 +1,4 @@
-[file name]: style.css
-[file content begin]
+
 /* Stanford-inspired Color Scheme */
 :root {
     --stanford-red: #8C1515;
@@ -672,4 +671,4 @@ body[data-theme="dark"] .dropdown-menu a {
 body[data-theme="dark"] .calendar-placeholder {
     background: #2a2a2a;
 }
-[file content end]
+
