@@ -1,5 +1,6 @@
-
 /* Stanford-inspired Color Scheme */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
 :root {
     --stanford-red: #8C1515;
     --stanford-dark-red: #620E10;
@@ -22,6 +23,11 @@
     --black: #FFFFFF;
 }
 
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -40,6 +46,25 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--stanford-red);
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 10000;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.skip-link:focus {
+    top: 6px;
 }
 
 /* Top Bar */
@@ -63,8 +88,10 @@ body {
     transition: var(--transition);
 }
 
-.top-bar-links a:hover {
+.top-bar-links a:hover,
+.top-bar-links a:focus {
     text-decoration: underline;
+    outline: none;
 }
 
 .login-btn {
@@ -148,10 +175,14 @@ body {
     display: flex;
     align-items: center;
     gap: 4px;
+    border-radius: 4px;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus {
     color: var(--stanford-red);
+    background: var(--stanford-light-gray);
+    outline: none;
 }
 
 /* Dropdown Menu */
@@ -170,7 +201,8 @@ body {
     z-index: 1000;
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -185,9 +217,11 @@ body {
     transition: var(--transition);
 }
 
-.dropdown-menu a:hover {
+.dropdown-menu a:hover,
+.dropdown-menu a:focus {
     background: var(--stanford-light-gray);
     color: var(--stanford-red);
+    outline: none;
 }
 
 .dropdown-menu a:last-child {
@@ -213,9 +247,18 @@ body {
     transition: var(--transition);
 }
 
-.dark-mode-toggle:hover, .search-toggle:hover {
+.dark-mode-toggle:hover, 
+.search-toggle:hover,
+.dark-mode-toggle:focus, 
+.search-toggle:focus {
     background: var(--stanford-light-gray);
     color: var(--stanford-red);
+    outline: none;
+}
+
+.dark-mode-toggle:active, 
+.search-toggle:active {
+    transform: scale(0.95);
 }
 
 /* Mobile Menu */
@@ -264,7 +307,8 @@ body {
 .hero-subtitle {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-    opacity: 0.9;
+    opacity: 0.95;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Section Styling */
@@ -333,9 +377,15 @@ body {
     font-size: 16px;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
     background: var(--stanford-dark-red);
     transform: translateY(-2px);
+    outline: none;
+}
+
+.btn:active {
+    transform: translateY(0);
 }
 
 .btn-outline {
@@ -344,7 +394,8 @@ body {
     color: var(--stanford-red);
 }
 
-.btn-outline:hover {
+.btn-outline:hover,
+.btn-outline:focus {
     background: var(--stanford-red);
     color: var(--white);
 }
@@ -362,7 +413,8 @@ body {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: var(--shadow);
-    transition: var(--transition);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.6s ease-out;
 }
 
 .news-card:hover {
@@ -373,13 +425,15 @@ body {
 .news-image {
     height: 200px;
     overflow: hidden;
+    position: relative;
+    background: var(--stanford-light-gray);
 }
 
 .news-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: var(--transition);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .news-card:hover .news-image img {
@@ -436,6 +490,7 @@ body {
     padding: 30px;
     border-radius: 8px;
     box-shadow: var(--shadow);
+    animation: fadeIn 0.6s ease-out;
 }
 
 .contact-item i {
@@ -496,8 +551,10 @@ body {
     transition: var(--transition);
 }
 
-.footer-section a:hover {
+.footer-section a:hover,
+.footer-section a:focus {
     color: var(--stanford-sandstone);
+    outline: none;
 }
 
 .footer-bottom {
@@ -548,6 +605,18 @@ body {
     margin-bottom: 20px;
 }
 
+/* Animations */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .hero h1 {
@@ -557,6 +626,11 @@ body {
     .about-preview {
         grid-template-columns: 1fr;
         gap: 30px;
+    }
+    
+    .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                    url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover;
     }
 }
 
@@ -633,6 +707,11 @@ body {
         flex-direction: column;
         text-align: center;
     }
+    
+    .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                    url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;
+    }
 }
 
 /* Dark Mode Styles */
@@ -643,8 +722,10 @@ body[data-theme="dark"] {
 
 body[data-theme="dark"] .main-header,
 body[data-theme="dark"] .news-card,
-body[data-theme="dark"] .contact-item {
+body[data-theme="dark"] .contact-item,
+body[data-theme="dark"] .calendar-container {
     background: #2a2a2a;
+    border: 1px solid #3a3a3a;
 }
 
 body[data-theme="dark"] .section-light {
@@ -661,6 +742,7 @@ body[data-theme="dark"] .nav-link {
 
 body[data-theme="dark"] .dropdown-menu {
     background: #2a2a2a;
+    border: 1px solid #3a3a3a;
 }
 
 body[data-theme="dark"] .dropdown-menu a {
@@ -670,5 +752,35 @@ body[data-theme="dark"] .dropdown-menu a {
 
 body[data-theme="dark"] .calendar-placeholder {
     background: #2a2a2a;
+    border: 1px solid #3a3a3a;
 }
 
+/* Print Styles */
+@media print {
+    .top-bar,
+    .main-header,
+    .nav-actions,
+    .footer-bottom,
+    .btn {
+        display: none;
+    }
+    
+    .hero {
+        height: auto;
+        background: none !important;
+        color: var(--black);
+    }
+    
+    .section {
+        padding: 40px 0;
+    }
+    
+    .news-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
