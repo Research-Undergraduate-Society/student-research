@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: Research-Undergraduate-Society/student-research
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: .netlify/identity/auth
+
+media_folder: "images" # Location where files (e.g., photos) will be stored
+public_folder: "/images" # Base path used to link to the files in the site
+
+# Define the collections (types of content) that users can edit
+collections:
+  - name: "pages"
+    label: "Static Pages"
+    files:
+      - file: "index.md"
+        label: "Home Page"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body Content", name: "body", widget: "markdown"}
