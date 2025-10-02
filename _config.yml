@@ -1,20 +1,3 @@
-
-# Site Configuration
 title: Research Undergraduate Society
 baseurl: "/student-research"
-
-# Society Information
-society_name: "Research Undergraduate Society"
-society_purpose: "Promoting undergraduate research and academic excellence through interdisciplinary collaboration, innovation, and scholarly activities."
-contact_email: "contact@rus.edu"
-
-# Navigation order
-nav_order:
-  - index.html
-  - physics.html
-  - mathematics.html
-  - parikrama.html
-  - journals.html
-  - newspaper.html
-  - events.html
-  - infor.html
+description: "Pioneering undergraduate research and academic excellence"
