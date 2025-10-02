@@ -1,49 +1,137 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | Research Undergraduate Society</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-links">
+                    <a href="#">RUS Facts</a>
+                    <a href="#">Maps & Directions</a>
+                </div>
+                <div class="top-bar-links">
+                    <a href="#">Student Profiles</a>
+                    <a href="#">Newsletters</a>
+                    <a href="#" class="login-btn">Log in</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-  <header>
-    <nav>
-      <ul class="main-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="physics.html">Physics Undegradudate Society</a></li>
-        <li><a href="mathematics.html">Mathematics Undergraduate Society</a></li>
-        <li><a href="parikrama.html">Parikrama Club</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="newspaper.html">Newspaper</a></li>
-      </ul>
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="{{ site.baseurl }}/">
+                        <!-- RUS Logo Placeholder -->
+                        <div class="logo-mark">RUS</div>
+                        <div class="logo-text">
+                            <span class="logo-main">Research Undergraduate Society</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul class="nav-links">
+                        <li class="dropdown">
+                            <a href="#" class="nav-link">Societies <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                                <a href="{{ site.baseurl }}/physics.html">Physics Society</a>
+                                <a href="{{ site.baseurl }}/mathematics.html">Maths Society</a>
+                                <a href="{{ site.baseurl }}/parikrama.html">Parikrama</a>
+                            </div>
+                        </li>
+                        <li><a href="{{ site.baseurl }}/journals.html" class="nav-link">Journals</a></li>
+                        <li><a href="{{ site.baseurl }}/newspaper.html" class="nav-link">Newspaper</a></li>
+                        <li><a href="{{ site.baseurl }}/events.html" class="nav-link">Events</a></li>
+                        <li><a href="{{ site.baseurl }}/infor.html" class="nav-link">About Us</a></li>
+                    </ul>
+                    
+                    <div class="nav-actions">
+                        <button class="dark-mode-toggle" id="darkModeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <button class="search-toggle">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    
+                    <button class="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-      <button class="hamburger-menu" aria-label="Toggle secondary navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </nav>
-  </header>
+    <main>
+        {{ content }}
+    </main>
 
-  <aside class="sidebar-nav">
-    <ul>
-      <li><a href="infor.html">Information</a></li>
-      <li><a href="members.html">Members</a></li>
-      <li><a href="faculty.html">Faculty Advisors</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </aside>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-mark">RUS</div>
+                        <span>Research Undergraduate Society</span>
+                    </div>
+                    <p>Fostering undergraduate research and academic excellence through innovation and collaboration.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="{{ site.baseurl }}/">Home</a></li>
+                        <li><a href="{{ site.baseurl }}/infor.html">About Us</a></li>
+                        <li><a href="{{ site.baseurl }}/contact.html">Contact</a></li>
+                        <li><a href="{{ site.baseurl }}/events.html">Events Calendar</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Societies</h4>
+                    <ul>
+                        <li><a href="{{ site.baseurl }}/physics.html">Physics Society</a></li>
+                        <li><a href="{{ site.baseurl }}/mathematics.html">Maths Society</a></li>
+                        <li><a href="{{ site.baseurl }}/parikrama.html">Parikrama</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a></li>
+                        <li><a href="#">Campus Location</a></li>
+                        <li><a href="#">Social Media</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Research Undergraduate Society. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-  <main class="container">
-    {{ content }}
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Academic Society. All Rights Reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="{{ site.baseurl }}/script.js"></script>
 </body>
 </html>
+[file content end]
