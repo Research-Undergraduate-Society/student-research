@@ -9,22 +9,27 @@
 <body>
 
   <header>
-      <nav>
-          <a href="index.html" class="nav-brand">Academic Society</a>
-          <button class="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-          <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="infor.html">Information</a></li>
-            <li><a href="members.html">Members</a></li>
-            <li><a href="faculty.html">Faculty Advisors</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-      </nav>
+    <nav>
+      <ul class="main-nav">
+        <li><a href="index.html">Home</a></li>
+        </ul>
+
+      <button class="hamburger-menu" aria-label="Toggle secondary navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
   </header>
+
+  <aside class="sidebar-nav">
+    <ul>
+      <li><a href="infor.html">Information</a></li>
+      <li><a href="members.html">Members</a></li>
+      <li><a href="faculty.html">Faculty Advisors</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </aside>
 
   <main class="container">
     {{ content }}
