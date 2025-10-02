@@ -1,14 +1,6 @@
 title: Research Undergraduate Society
-baseurl: "/student-research"
+baseurl: "" # Or whatever you decided
 description: "Pioneering undergraduate research and academic excellence"
-
-# Add new plugins needed for the CMS
-plugins:
-  - jekyll-feed
-  - jekyll-netlify-cms
-
-# Configure path where CMS will save images/files
 media_folder: "images"
 public_folder: "/images"
-# Configuration to ensure the admin folder is copied to the live site
 include: ["admin"]
