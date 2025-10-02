@@ -20,6 +20,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav {
@@ -28,7 +29,7 @@ nav {
   display: flex;
   justify-content: center; /* Center the main nav links */
   align-items: center;
-  position: relative; /* For positioning the hamburger button */
+  position: relative; /* Needed for positioning the hamburger */
 }
 
 /* Main, always-visible nav links */
@@ -36,10 +37,11 @@ nav {
   list-style: none;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap; /* Allows links to wrap on smaller screens */
 }
 
 .main-nav li {
-  margin: 0 1rem;
+  margin: 0.2rem 0.8rem;
 }
 
 .main-nav li a {
@@ -53,10 +55,6 @@ nav {
 
 .main-nav li a:hover {
   background-color: #003060;
-}
-
-.main-nav li a.active {
-  background-color: #002040;
 }
 
 /* Hamburger Menu Button */
@@ -94,7 +92,8 @@ nav {
   z-index: 1100;
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
-  padding-top: 4rem;
+  padding-top: 5rem;
+  box-shadow: -5px 0 15px rgba(0,0,0,0.2);
 }
 
 .sidebar-nav.open {
@@ -111,6 +110,7 @@ nav {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
+  font-size: 1.1rem;
   transition: background 0.3s;
 }
 
@@ -118,17 +118,55 @@ nav {
   background-color: #004080;
 }
 
-.sidebar-nav ul li a.active {
+/* Active link style for both navs */
+.main-nav a.active, .sidebar-nav a.active {
   background-color: #002040;
 }
 
+/* Main container */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
 
-/* --- Main Content and other styles (Unchanged from your original) --- */
+/* Page headings */
+main h1 {
+  margin-bottom: 1rem;
+  color: #004080;
+}
 
-.container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
-main h1 { margin-bottom: 1rem; color: #004080; }
-main p { margin-bottom: 2rem; font-size: 1.1rem; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
-.card { background-color: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-.card h2 { margin-bottom: 0.8rem; color: #004080; }
-footer { text-align: center; padding: 1.5rem 0; background-color: #004080; color: #fff; margin-top: 2rem; }
+/* Paragraphs */
+main p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* Grid layout for cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Card styling */
+.card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  margin-bottom: 0.8rem;
+  color: #004080;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  background-color: #004080;
+  color: #fff;
+  margin-top: 2rem;
+}
