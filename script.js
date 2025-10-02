@@ -1,44 +1,98 @@
-// --- Hamburger Menu Toggle ---
-const hamburger = document.querySelector('.hamburger-menu');
-const sidebar = document.querySelector('.sidebar-nav');
 
-// Toggle sidebar on hamburger click
-hamburger.addEventListener('click', () => {
-  sidebar.classList.toggle('open');
-  // For accessibility: update aria-expanded attribute
-  const isExpanded = sidebar.classList.contains('open');
-  hamburger.setAttribute('aria-expanded', isExpanded);
+// Dark Mode Toggle
+const darkModeToggle = document.getElementById('darkModeToggle');
+const body = document.body;
+
+// Check for saved theme or prefer-color-scheme
+const savedTheme = localStorage.getItem('theme');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    body.setAttribute('data-theme', 'dark');
+    updateDarkModeIcon(true);
+}
+
+darkModeToggle.addEventListener('click', () => {
+    const isDark = body.getAttribute('data-theme') === 'dark';
+    
+    if (isDark) {
+        body.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        updateDarkModeIcon(false);
+    } else {
+        body.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        updateDarkModeIcon(true);
+    }
 });
 
-// Close sidebar when a link inside it is clicked
-document.querySelectorAll('.sidebar-nav li a').forEach(link => {
-    link.addEventListener('click', () => {
-        if (sidebar.classList.contains('open')) {
-            sidebar.classList.remove('open');
-            hamburger.setAttribute('aria-expanded', 'false');
+function updateDarkModeIcon(isDark) {
+    const icon = darkModeToggle.querySelector('i');
+    if (isDark) {
+        icon.className = 'fas fa-sun';
+    } else {
+        icon.className = 'fas fa-moon';
+    }
+}
+
+// Mobile Menu Toggle
+const mobileToggle = document.querySelector('.mobile-menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+mobileToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    mobileToggle.classList.toggle('active');
+});
+
+// Dropdown functionality for mobile
+if (window.innerWidth <= 768) {
+    document.querySelectorAll('.dropdown > .nav-link').forEach(dropdown => {
+        dropdown.addEventListener('click', (e) => {
+            e.preventDefault();
+            const dropdownMenu = dropdown.parentElement;
+            dropdownMenu.classList.toggle('active');
+        });
+    });
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.main-nav') && navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        mobileToggle.classList.remove('active');
+    }
+});
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
         }
     });
 });
 
-
-// --- General Scripts ---
-
-// Smooth scroll for any on-page anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
+// Active navigation highlighting
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav-link').forEach(link => {
+    const linkHref = link.getAttribute('href');
+    if (linkHref && linkHref.includes(currentPage)) {
+        link.classList.add('active');
+    }
 });
 
-// Automatically highlight active link in BOTH the main nav and the sidebar
-// Handles case for root path '/' correctly mapping to index.html
-const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-document.querySelectorAll('.main-nav a, .sidebar-nav a').forEach(link => {
-  // Check if the link's href matches the current page's filename
-  if (link.getAttribute('href') === currentPage) {
-    link.classList.add('active');
-  }
+// Search functionality (placeholder)
+const searchToggle = document.querySelector('.search-toggle');
+searchToggle.addEventListener('click', () => {
+    alert('Search functionality coming soon!');
+});
+
+// Initialize any other interactive elements
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Research Undergraduate Society website loaded');
 });
