@@ -1,29 +1,36 @@
-
 ---
 layout: default
 title: Home
 ---
+
 <!-- Hero Section -->
 <section class="hero">
     <div class="hero-content">
         <h1>Research Undergraduate Society</h1>
         <p class="hero-subtitle">Pioneering undergraduate research and academic excellence</p>
+        <a href="#about" class="btn">Explore Our Work</a>
     </div>
 </section>
 
-<!-- About Us Preview Section -->
-<section class="section section-light">
+<!-- About Section -->
+<section id="about" class="section section-light">
     <div class="container">
+        <div class="section-header">
+            <h2>About Research Undergraduate Society</h2>
+            <p>Dedicated to fostering academic excellence and research innovation</p>
+        </div>
         <div class="about-preview">
             <div class="about-content">
-                <h3>About Research Undergraduate Society</h3>
+                <h3>Our Mission</h3>
                 <p>The Research Undergraduate Society (RUS) is dedicated to fostering academic excellence and research innovation among undergraduate students. We provide a platform for interdisciplinary collaboration, scholarly activities, and professional development.</p>
                 <p>Through our various societies and initiatives, we aim to cultivate a vibrant research community where students can explore their academic interests, develop research skills, and contribute to meaningful scholarly work.</p>
-                <a href="{{ site.baseurl }}/infor.html" class="btn">More About Us</a>
+                <a href="{{ '/infor' | relative_url }}" class="btn">More About Us</a>
             </div>
             <div class="about-image">
-                <div style="background: var(--stanford-light-gray); height: 400px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--stanford-cool-gray);">
-                    <i class="fas fa-users" style="font-size: 3rem; color: var(--stanford-red);"></i>
+                <div class="calendar-placeholder">
+                    <i class="fas fa-users"></i>
+                    <h3>Join Our Community</h3>
+                    <p>Become part of our growing research community</p>
                 </div>
             </div>
         </div>
@@ -35,90 +42,77 @@ title: Home
     <div class="container">
         <div class="section-header">
             <h2>Latest News & Events</h2>
-            <p>Stay updated with the latest research news, upcoming events, and society activities</p>
+            <p>Stay updated with our latest activities and opportunities</p>
         </div>
-        
         <div class="news-grid">
             <div class="news-card">
                 <div class="news-image">
-                    <div style="background: var(--stanford-red); height: 100%; display: flex; align-items: center; justify-content: center; color: white;">
-                        <i class="fas fa-flask" style="font-size: 3rem;"></i>
-                    </div>
-                </div>
-                <div class="news-content">
-                    <span class="news-category">Research</span>
-                    <h3 class="news-title">Annual Research Symposium 2024</h3>
-                    <div class="news-date">March 15, 2024</div>
-                    <p class="news-excerpt">Join us for the premier undergraduate research event featuring student presentations and keynote speakers.</p>
-                    <a href="#" class="btn btn-outline">Read More</a>
-                </div>
-            </div>
-            
-            <div class="news-card">
-                <div class="news-image">
-                    <div style="background: var(--stanford-cool-gray); height: 100%; display: flex; align-items: center; justify-content: center; color: white;">
-                        <i class="fas fa-calendar-alt" style="font-size: 3rem;"></i>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Research Symposium">
                 </div>
                 <div class="news-content">
                     <span class="news-category">Event</span>
-                    <h3 class="news-title">Physics Society Workshop</h3>
-                    <div class="news-date">March 22, 2024</div>
-                    <p class="news-excerpt">Hands-on workshop on experimental techniques and data analysis in modern physics research.</p>
-                    <a href="#" class="btn btn-outline">Read More</a>
+                    <h3 class="news-title">Annual Research Symposium 2024</h3>
+                    <div class="news-date">March 15, 2024</div>
+                    <p class="news-excerpt">Join us for our flagship event showcasing undergraduate research projects across all disciplines.</p>
+                    <a href="{{ '/events' | relative_url }}" class="btn btn-outline">Learn More</a>
                 </div>
             </div>
             
             <div class="news-card">
                 <div class="news-image">
-                    <div style="background: var(--stanford-warm-gray); height: 100%; display: flex; align-items: center; justify-content: center; color: white;">
-                        <i class="fas fa-newspaper" style="font-size: 3rem;"></i>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Journal Publication">
                 </div>
                 <div class="news-content">
                     <span class="news-category">Publication</span>
                     <h3 class="news-title">New Journal Issue Released</h3>
-                    <div class="news-date">March 10, 2024</div>
-                    <p class="news-excerpt">The latest issue of Undergraduate Research Journal features cutting-edge student work across disciplines.</p>
-                    <a href="#" class="btn btn-outline">Read More</a>
+                    <div class="news-date">February 28, 2024</div>
+                    <p class="news-excerpt">The latest issue of our undergraduate research journal is now available online.</p>
+                    <a href="{{ '/journals' | relative_url }}" class="btn btn-outline">Read Issue</a>
                 </div>
             </div>
-        </div>
-        
-        <div style="text-align: center;">
-            <a href="{{ site.baseurl }}/newspaper.html" class="btn">View All News & Events</a>
+            
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Workshop">
+                </div>
+                <div class="news-content">
+                    <span class="news-category">Workshop</span>
+                    <h3 class="news-title">Research Methodology Workshop</h3>
+                    <div class="news-date">February 15, 2024</div>
+                    <p class="news-excerpt">Learn essential research skills and methodologies in our hands-on workshop series.</p>
+                    <a href="{{ '/events' | relative_url }}" class="btn btn-outline">Register Now</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- Contact Section -->
-<section class="contact-section">
+<section class="contact-section section section-light">
     <div class="container">
         <div class="section-header">
-            <h2>Contact Us</h2>
-            <p>Get in touch with the Research Undergraduate Society</p>
+            <h2>Get Involved</h2>
+            <p>Join our community of passionate undergraduate researchers</p>
         </div>
-        
         <div class="contact-info">
             <div class="contact-item">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Upcoming Events</h3>
+                <p>Check our events calendar for workshops, seminars, and symposiums</p>
+                <a href="{{ '/events' | relative_url }}" class="btn btn-outline">View Events</a>
+            </div>
+            <div class="contact-item">
                 <i class="fas fa-envelope"></i>
-                <h3>Email</h3>
-                <p>contact@rus.edu</p>
+                <h3>Stay Connected</h3>
+                <p>Join our mailing list to receive updates and opportunities</p>
+                <a href="{{ '/contact' | relative_url }}" class="btn btn-outline">Contact Us</a>
             </div>
-            
             <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <h3>Location</h3>
-                <p>Research Building, Campus</p>
-            </div>
-            
-            <div class="contact-item">
-                <i class="fas fa-clock"></i>
-                <h3>Office Hours</h3>
-                <p>Mon-Fri: 9AM-5PM</p>
+                <i class="fas fa-handshake"></i>
+                <h3>Collaborate</h3>
+                <p>Interested in starting a research project? Get in touch with our team</p>
+                <a href="{{ '/members' | relative_url }}" class="btn btn-outline">Meet the Team</a>
             </div>
         </div>
-        
-        <a href="{{ site.baseurl }}/contact.html" class="btn" style="margin-top: 30px;">Contact Form</a>
     </div>
 </section>
