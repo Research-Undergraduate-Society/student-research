@@ -10,3 +10,5 @@ plugins:
 # Configure path where CMS will save images/files
 media_folder: "images"
 public_folder: "/images"
+# Configuration to ensure the admin folder is copied to the live site
+include: ["admin"]
