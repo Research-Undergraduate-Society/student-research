@@ -1,5 +1,4 @@
-[file name]: _config.yml
-[file content begin]
+
 # Site Configuration
 title: Research Undergraduate Society
 baseurl: "/student-research"
@@ -19,4 +18,3 @@ nav_order:
   - newspaper.html
   - events.html
   - infor.html
-[file content end]
