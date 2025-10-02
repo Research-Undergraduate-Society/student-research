@@ -1,28 +1,27 @@
-// --- NEW: Hamburger Menu Toggle ---
+// --- Hamburger Menu Toggle ---
 const hamburger = document.querySelector('.hamburger-menu');
-const navLinks = document.querySelector('.nav-links');
+const sidebar = document.querySelector('.sidebar-nav');
 
 hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-  // For accessibility: update aria-expanded attribute
-  const isExpanded = navLinks.classList.contains('open');
+  sidebar.classList.toggle('open');
+  const isExpanded = sidebar.classList.contains('open');
   hamburger.setAttribute('aria-expanded', isExpanded);
 });
 
 // Close sidebar when a link is clicked
-document.querySelectorAll('.nav-links li a').forEach(link => {
+document.querySelectorAll('.sidebar-nav li a').forEach(link => {
     link.addEventListener('click', () => {
-        if (navLinks.classList.contains('open')) {
-            navLinks.classList.remove('open');
+        if (sidebar.classList.contains('open')) {
+            sidebar.classList.remove('open');
             hamburger.setAttribute('aria-expanded', 'false');
         }
     });
 });
 
 
-// --- EXISTING SCRIPT (with minor update) ---
+// --- Other Scripts ---
 
-// Smooth scroll for any anchor links (like #section)
+// Smooth scroll for any anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
@@ -32,11 +31,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Automatically highlight active navbar link based on current page
-// Handles case for root path '/' correctly mapping to index.html
+// Automatically highlight active link in BOTH main nav and sidebar
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-document.querySelectorAll('.nav-links li a').forEach(link => {
-  if(link.getAttribute('href') === currentPage) {
+document.querySelectorAll('.main-nav a, .sidebar-nav a').forEach(link => {
+  if (link.getAttribute('href') === currentPage) {
     link.classList.add('active');
   }
 });
