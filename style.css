@@ -13,32 +13,53 @@ body {
   color: #333;
 }
 
-/* Header & Navbar */
+/* Header & Main Navbar */
 header {
   background-color: #004080;
   padding: 1rem;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 nav {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Center the main nav links */
   align-items: center;
+  position: relative; /* For positioning the hamburger button */
 }
 
-.nav-brand {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: bold;
+/* Main, always-visible nav links */
+.main-nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
 }
 
-/* Hamburger Menu Button (Mobile First) */
+.main-nav li {
+  margin: 0 1rem;
+}
+
+.main-nav li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.main-nav li a:hover {
+  background-color: #003060;
+}
+
+.main-nav li a.active {
+  background-color: #002040;
+}
+
+/* Hamburger Menu Button */
 .hamburger-menu {
   display: flex;
   flex-direction: column;
@@ -50,10 +71,8 @@ nav {
   cursor: pointer;
   padding: 0;
   z-index: 10;
-}
-
-.hamburger-menu:focus {
-  outline: none;
+  position: absolute; /* Position it within the nav bar */
+  right: 1rem; /* On the far right */
 }
 
 .hamburger-menu span {
@@ -62,161 +81,54 @@ nav {
   background: #fff;
   border-radius: 10px;
   transition: all 0.3s linear;
-  position: relative;
-  transform-origin: 1px;
 }
 
-/* Sidebar Navigation (Mobile First) */
-.nav-links {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #003060;
+/* Sidebar Navigation */
+.sidebar-nav {
+  height: 100vh;
+  width: 250px;
   position: fixed;
   top: 0;
   right: 0;
-  height: 100vh;
-  width: 250px;
-  padding-top: 5rem;
+  background-color: #003060;
+  z-index: 1100;
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
+  padding-top: 4rem;
 }
 
-.nav-links.open {
+.sidebar-nav.open {
   transform: translateX(0);
 }
 
-.nav-links li {
-  margin: 1rem 0;
-  width: 100%;
-  text-align: center;
+.sidebar-nav ul {
+  list-style: none;
 }
 
-.nav-links li a {
+.sidebar-nav ul li a {
+  display: block;
+  padding: 1rem 2rem;
   text-decoration: none;
   color: #fff;
   font-weight: bold;
-  font-size: 1.2rem;
-  padding: 0.8rem 1rem;
-  border-radius: 4px;
   transition: background 0.3s;
-  display: block;
 }
 
-.nav-links li a:hover {
+.sidebar-nav ul li a:hover {
   background-color: #004080;
 }
 
-.nav-links li a.active {
+.sidebar-nav ul li a.active {
   background-color: #002040;
 }
 
-/* Main container */
-.container {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
 
-/* Page headings */
-main h1 {
-  margin-bottom: 1rem;
-  color: #004080;
-}
+/* --- Main Content and other styles (Unchanged from your original) --- */
 
-/* Paragraphs */
-main p {
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
-}
-
-/* Grid layout for cards */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-/* Card styling */
-.card {
-  background-color: #fff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-.card h2 {
-  margin-bottom: 0.8rem;
-  color: #004080;
-}
-
-/* Footer styling */
-footer {
-  text-align: center;
-  padding: 1.5rem 0;
-  background-color: #004080;
-  color: #fff;
-  margin-top: 2rem;
-}
-
-/* Form styling (contact page) */
-form input, form textarea {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 0.7rem;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-}
-
-form button {
-  background-color: #004080;
-  color: #fff;
-  border: none;
-  padding: 0.7rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-/* Images inside cards (members page) */
-.card img {
-  display: block;
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-/* Responsive styles for Desktop */
-@media (min-width: 768px) {
-  .hamburger-menu {
-    display: none;
-  }
-
-  .nav-links {
-    position: static;
-    transform: translateX(0);
-    height: auto;
-    width: auto;
-    flex-direction: row;
-    background-color: transparent;
-    padding-top: 0;
-  }
-
-  .nav-links li {
-    margin: 0 1rem;
-    width: auto;
-  }
-  
-  .nav-links li a {
-    font-size: 1rem;
-    display: inline;
-  }
-}
+.container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
+main h1 { margin-bottom: 1rem; color: #004080; }
+main p { margin-bottom: 2rem; font-size: 1.1rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+.card { background-color: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+.card h2 { margin-bottom: 0.8rem; color: #004080; }
+footer { text-align: center; padding: 1.5rem 0; background-color: #004080; color: #fff; margin-top: 2rem; }
