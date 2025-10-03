@@ -18,3 +18,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+
+  # ... (rest of your config file) ...
+
+# Force re-build: October 3, 2025
