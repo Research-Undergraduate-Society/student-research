@@ -1,7 +1,7 @@
 title: Research Undergraduate Society
 baseurl: "" 
+url: "https://yourusername.github.io"  # ADD THIS LINE - replace with your actual GitHub username
 description: "Pioneering undergraduate research and academic excellence"
-url: "https://yourusername.github.io"  # Replace with your actual GitHub username
 media_folder: "images"
 public_folder: "/images"
 include: ["admin"]
