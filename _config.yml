@@ -2,26 +2,18 @@
 
 # --- Site Settings ---
 title: Research Undergraduate Society
-email: your-email@example.com # Optional: add a contact email
-description: >- # This is great for SEO. Write a short description of your site.
+email: your-email@example.com
+description: >-
   The official website for the Research Undergraduate Society at NIT Rourkela,
   showcasing journals, projects, events, and member activities.
-baseurl: "/student-research" # The subpath of your site, e.g. /blog
-url: "https://your-github-username.github.io" # Your site's main URL
+baseurl: "/student-research"
+url: "https://research-undergraduate-society.github.io" # <-- I've filled this in for you
 
 # --- Build Settings ---
-# Where things are
-source: .
-destination: ./_site
-collections_dir: .
-plugins_dir: _plugins # Optional
-
-# Plugins - You MUST list your Gemfile plugins here to activate them
 plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-# Exclude from processing.
 exclude:
   - Gemfile
   - Gemfile.lock
