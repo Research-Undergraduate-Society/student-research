@@ -8,10 +8,8 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-    <!-- Skip link for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Top Bar -->
     <div class="top-bar">
         <div class="container">
             <div class="top-bar-content">
@@ -27,21 +25,14 @@
         </div>
     </div>
 
-    <!-- Main Header -->
     <header class="main-header">
         <div class="container">
             <div class="header-content">
-                <!-- Logo -->
-                <div class="logo">
-                    <a href="{{ '/' | relative_url }}">
-                        <div class="logo-mark">RUS</div>
-                        <div class="logo-text">
-                            <div class="logo-main">Research Undergraduate Society</div>
-                        </div>
-                    </a>
-                </div>
+                <a href="{{ '/' | relative_url }}" class="logo">
+                    <div class="logo-mark">RUS</div>
+                    <div class="logo-text">Research Undergraduate Society</div>
+                </a>
 
-                <!-- Navigation -->
                 <nav class="main-nav">
                     <ul class="nav-links">
                         <li><a href="{{ '/' | relative_url }}" class="nav-link">Home</a></li>
@@ -59,15 +50,14 @@
                         <li><a href="{{ '/parikrama' | relative_url }}" class="nav-link">Parikrama</a></li>
                     </ul>
 
-                    <!-- Nav Actions -->
                     <div class="nav-actions">
-                        <button class="search-toggle" aria-label="Search">
+                        <button class="search-toggle" aria-label="Toggle Search">
                             <i class="fas fa-search"></i>
                         </button>
                         <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
                             <i class="fas fa-moon"></i>
                         </button>
-                        <button class="mobile-menu-toggle">
+                        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
                             <span></span>
                             <span></span>
                             <span></span>
@@ -78,22 +68,18 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main id="main-content">
         {{ content }}
     </main>
 
-    <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <div class="footer-logo">
+                    <a href="{{ '/' | relative_url }}" class="logo footer-logo">
                         <div class="logo-mark">RUS</div>
-                        <div class="logo-text">
-                            <div class="logo-main">Research Undergraduate Society</div>
-                        </div>
-                    </div>
+                        <div class="logo-text">Research Undergraduate Society</div>
+                    </a>
                     <p>Pioneering undergraduate research and academic excellence through interdisciplinary collaboration and scholarly activities.</p>
                 </div>
                 
@@ -127,16 +113,15 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 Research Undergraduate Society. All rights reserved.</p>
+                <p>&copy; {% now '%Y' %} Research Undergraduate Society. All rights reserved.</p>
                 <div class="footer-links">
-                    <a href="{{ '/infor' | relative_url }}">Privacy Policy</a>
-                    <a href="{{ '/infor' | relative_url }}">Terms of Service</a>
+                    <a href="{{ '/info' | relative_url }}">Privacy Policy</a>
+                    <a href="{{ '/info' | relative_url }}">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- REMOVED DUPLICATE SCRIPT TAG - KEEP ONLY THIS ONE -->
-    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/script.js' | relative_url }}" defer></script>
 </body>
 </html>
