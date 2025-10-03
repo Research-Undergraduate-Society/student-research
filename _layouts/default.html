@@ -8,140 +8,36 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <div class="top-bar">
-        <div class="container">
-            <div class="top-bar-content">
-                <div class="top-bar-links">
-                    <a href="{{ '/contact' | relative_url }}">Contact</a>
-                    <a href="{{ '/faculty' | relative_url }}">Faculty</a>
-                    <a href="{{ '/members' | relative_url }}">Members</a>
-                </div>
-                <div class="top-bar-actions">
-                    <a href="#" class="login-btn">Student Login</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <header class="main-header">
-        <div class="container">
-            <div class="header-content">
-                <a href="{{ '/' | relative_url }}" class="logo">
-                    <div class="logo-mark">RUS</div>
-                    <div class="logo-text">Research Undergraduate Society</div>
-                </a>
-
-                <nav class="main-nav">
-                    <ul class="nav-links">
-                        <li><a href="{{ '/' | relative_url }}" class="nav-link">Home</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="nav-link">Societies <i class="fas fa-chevron-down"></i></a>
-                            <div class="dropdown-menu">
-                                <a href="{{ '/physics' | relative_url }}">Physics Society</a>
-                                <a href="{{ '/mathematics' | relative_url }}">Mathematics Society</a>
-                            </div>
-                        </li>
-                        <li><a href="{{ '/journals' | relative_url }}" class="nav-link">Journals</a></li>
-                        <li><a href="{{ '/projects' | relative_url }}" class="nav-link">Projects</a></li>
-                        <li><a href="{{ '/events' | relative_url }}" class="nav-link">Events</a></li>
-                        <li><a href="{{ '/newspaper' | relative_url }}" class="nav-link">Newspaper</a></li>
-                        <li><a href="{{ '/parikrama' | relative_url }}" class="nav-link">Parikrama</a></li>
-                    </ul>
-
-                    <div class="nav-actions">
-                        <button class="search-toggle" aria-label="Toggle Search">
-                            <i class="fas fa-search"></i>
-                        </button>
-                        <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
-                            <i class="fas fa-moon"></i>
-                        </button>
-                        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </header>
+    {% include header.html %}
 
     <main id="main-content">
         {{ content }}
     </main>
 
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <a href="{{ '/' | relative_url }}" class="logo footer-logo">
-                        <div class="logo-mark">RUS</div>
-                        <div class="logo-text">Research Undergraduate Society</div>
-                    </a>
-                    <p>Pioneering undergraduate research and academic excellence through interdisciplinary collaboration and scholarly activities.</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="{{ '/' | relative_url }}">Home</a></li>
-                        <li><a href="{{ '/events' | relative_url }}">Events</a></li>
-                        <li><a href="{{ '/journals' | relative_url }}">Journals</a></li>
-                        <li><a href="{{ '/projects' | relative_url }}">Projects</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Societies</h4>
-                    <ul>
-                        <li><a href="{{ '/physics' | relative_url }}">Physics Society</a></li>
-                        <li><a href="{{ '/mathematics' | relative_url }}">Mathematics Society</a></li>
-                        <li><a href="{{ '/parikrama' | relative_url }}">Parikrama</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="{{ '/contact' | relative_url }}">Contact Us</a></li>
-                        <li><a href="{{ '/faculty' | relative_url }}">Faculty Advisors</a></li>
-                        <li><a href="{{ '/members' | relative_url }}">Members</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; {% now '%Y' %} Research Undergraduate Society. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="{{ '/info' | relative_url }}">Privacy Policy</a>
-                    <a href="{{ '/info' | relative_url }}">Terms of Service</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    {% include footer.html %}
 
     <script src="{{ '/assets/js/script.js' | relative_url }}" defer></script>
     
     <div id="searchOverlay" class="search-overlay" hidden>
-    <div class="search-modal">
-        <div class="search-header">
-            <h3>Search</h3>
-            <button class="search-close" aria-label="Close search">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="search-input-container">
-            <input type="text" placeholder="Enter your search term..." id="searchInput">
-            <button class="search-submit" aria-label="Submit search">
-                <i class="fas fa-search"></i>
-            </button>
-        </div>
-        <div class="search-results">
-            <p>Search functionality coming soon!</p>
+        <div class="search-modal">
+            <div class="search-header">
+                <h3>Search</h3>
+                <button class="search-close" aria-label="Close search">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="search-input-container">
+                <input type="text" placeholder="Enter your search term..." id="searchInput">
+                <button class="search-submit" aria-label="Submit search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="search-results">
+                <p>Search functionality coming soon!</p>
+            </div>
         </div>
     </div>
-</div>
+
 </body>
 </html>
