@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
 
 :root {
-    --stanford-red: #8C1515;
-    --stanford-dark-red: #620E10;
+    --stanford-red: #005A9C; /* Changed from #8C1515 to a primary blue */
+    --stanford-dark-red: #004071; /* Changed from #620E10 to a darker blue */
     --stanford-cool-gray: #4D4F53;
     --stanford-warm-gray: #9D9573;
     --stanford-light-gray: #F4F4F4;
@@ -15,8 +15,8 @@
 }
 
 [data-theme="dark"] {
-    --stanford-red: #B83A3A;
-    --stanford-dark-red: #8C1515;
+    --stanford-red: #419fde; /* Changed from #B83A3A to a lighter blue for dark mode */
+    --stanford-dark-red: #005A9C; /* Changed from #8C1515 to the primary blue */
     --stanford-cool-gray: #B0B3B8;
     --stanford-light-gray: #2A2A2A;
     --white: #1A1A1A;
