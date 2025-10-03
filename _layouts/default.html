@@ -123,5 +123,25 @@
     </footer>
 
     <script src="{{ '/assets/js/script.js' | relative_url }}" defer></script>
+    
+    <div id="searchOverlay" class="search-overlay" hidden>
+    <div class="search-modal">
+        <div class="search-header">
+            <h3>Search</h3>
+            <button class="search-close" aria-label="Close search">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="search-input-container">
+            <input type="text" placeholder="Enter your search term..." id="searchInput">
+            <button class="search-submit" aria-label="Submit search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div class="search-results">
+            <p>Search functionality coming soon!</p>
+        </div>
+    </div>
+</div>
 </body>
 </html>
