@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
     <!-- Skip link for accessibility -->
@@ -112,6 +112,7 @@
                     <ul>
                         <li><a href="{{ '/physics' | relative_url }}">Physics Society</a></li>
                         <li><a href="{{ '/mathematics' | relative_url }}">Mathematics Society</a></li>
+                        <li><a href="{{ '/parikrama' | relative_url }}">Parikrama</a></li>
                     </ul>
                 </div>
                 
@@ -135,6 +136,7 @@
         </div>
     </footer>
 
+    <!-- REMOVED DUPLICATE SCRIPT TAG - KEEP ONLY THIS ONE -->
     <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
 </body>
 </html>
