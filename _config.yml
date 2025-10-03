@@ -1,7 +1,8 @@
+# _config.yml
+
+# ... other settings
 title: Research Undergraduate Society
-baseurl: "" 
-url: "https://yourusername.github.io"  # ADD THIS LINE - replace with your actual GitHub username
-description: "Pioneering undergraduate research and academic excellence"
-media_folder: "images"
-public_folder: "/images"
-include: ["admin"]
+# etc.
+
+# Add this line! The value should be your repository name, preceded by a slash.
+baseurl: "/student-research"
