@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
+    <!-- Skip link for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
+    <!-- Top Bar -->
     <div class="top-bar">
         <div class="container">
             <div class="top-bar-content">
@@ -25,9 +27,11 @@
         </div>
     </div>
 
+    <!-- Main Header -->
     <header class="main-header">
         <div class="container">
             <div class="header-content">
+                <!-- Logo -->
                 <div class="logo">
                     <a href="{{ '/' | relative_url }}">
                         <div class="logo-mark">RUS</div>
@@ -37,22 +41,25 @@
                     </a>
                 </div>
 
+                <!-- Navigation -->
                 <nav class="main-nav">
                     <ul class="nav-links">
-                        <li><a href="{{ '/infor' | relative_url }}" class="nav-link">About Us</a></li>
+                        <li><a href="{{ '/' | relative_url }}" class="nav-link">Home</a></li>
                         <li class="dropdown">
                             <a href="#" class="nav-link">Societies <i class="fas fa-chevron-down"></i></a>
                             <div class="dropdown-menu">
                                 <a href="{{ '/physics' | relative_url }}">Physics Society</a>
                                 <a href="{{ '/mathematics' | relative_url }}">Mathematics Society</a>
-                                <a href="{{ '/parikrama' | relative_url }}">Parikrama</a>
                             </div>
                         </li>
                         <li><a href="{{ '/journals' | relative_url }}" class="nav-link">Journals</a></li>
+                        <li><a href="{{ '/projects' | relative_url }}" class="nav-link">Projects</a></li>
                         <li><a href="{{ '/events' | relative_url }}" class="nav-link">Events</a></li>
                         <li><a href="{{ '/newspaper' | relative_url }}" class="nav-link">Newspaper</a></li>
+                        <li><a href="{{ '/parikrama' | relative_url }}" class="nav-link">Parikrama</a></li>
                     </ul>
 
+                    <!-- Nav Actions -->
                     <div class="nav-actions">
                         <button class="search-toggle" aria-label="Search">
                             <i class="fas fa-search"></i>
@@ -71,10 +78,12 @@
         </div>
     </header>
 
+    <!-- Main Content -->
     <main id="main-content">
         {{ content }}
     </main>
 
+    <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-content">
