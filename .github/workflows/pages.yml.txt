@@ -27,8 +27,6 @@ jobs:
         with:
           source: ./jekyll-site
           destination: ./_site
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
 
   deploy:
     environment:
