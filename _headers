@@ -1,4 +1,0 @@
-/*
-  Cache-Control: public, max-age=0, must-revalidate
-  # This is the critical line to fix JS loading issues in SPAs:
-  X-Frame-Options: SAMEORIGIN
