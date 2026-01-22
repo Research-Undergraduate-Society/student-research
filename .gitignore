@@ -1,6 +1,0 @@
-
-# Ignore files from the RUS App
-rus_app/node_modules
-rus_app/dist
-rus_app/.env.local
-rus_app/.env
