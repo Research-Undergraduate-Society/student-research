@@ -1,0 +1,211 @@
+/* --- RESET & VARIABLES --- */
+:root {
+    --primary: #1B263B;      /* Midnight Blue */
+    --secondary: #F5F5F0;    /* Parchment / Off-White */
+    --accent: #C5A065;       /* Muted Gold */
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --font-head: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--secondary);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+ul { list-style: none; }
+
+/* --- NAVIGATION --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: var(--primary);
+    color: var(--text-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-family: var(--font-head);
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--accent);
+}
+
+.nav-links { display: flex; gap: 2rem; align-items: center; }
+
+.nav-links a {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.8);
+}
+
+.nav-links a:hover, .nav-links a.active { color: var(--accent); }
+
+.contact-btn {
+    border: 1px solid var(--accent);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+/* Dropdown Menu */
+.dropdown { position: relative; }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--primary);
+    min-width: 160px;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.dropdown-content a {
+    padding: 12px 16px;
+    display: block;
+    text-transform: none;
+}
+.dropdown:hover .dropdown-content { display: block; }
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(27, 38, 59, 0.9), rgba(27, 38, 59, 0.8)), url('../assets/hero-bg.jpg'); /* Add a background image later */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.hero h1 {
+    font-family: var(--font-head);
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.btn-main {
+    padding: 0.8rem 2rem;
+    background-color: var(--accent);
+    color: var(--primary);
+    font-weight: 700;
+    border-radius: 2px;
+}
+
+.btn-main:hover { background-color: #d4b078; }
+
+/* --- SECTIONS --- */
+.section-pad { padding: 4rem 5%; }
+.container { max-width: 1100px; margin: 0 auto; }
+.bg-light { background-color: #ffffff; }
+
+h2 {
+    font-family: var(--font-head);
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.lead-text {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* --- CARDS --- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.soc-card {
+    background: var(--secondary);
+    border: 1px solid #ddd;
+    padding: 2rem;
+    border-left: 5px solid var(--primary);
+    transition: transform 0.3s;
+}
+
+.soc-card:hover { transform: translateY(-5px); }
+
+.soc-card h3 {
+    font-family: var(--font-head);
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.link-text {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* --- FOOTER / CONTACT --- */
+#contact {
+    background-color: var(--primary);
+    color: var(--text-light);
+    padding: 3rem 5% 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-col h3 {
+    font-family: var(--font-head);
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+.btn-outline {
+    display: inline-block;
+    border: 1px solid var(--text-light);
+    padding: 0.5rem 1rem;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.btn-outline:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--primary);
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 1rem;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
