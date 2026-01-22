@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Introduction to Tensor Calculus",
+    "date": "Dec 10, 2025",
+    "summary": "A beginner-friendly guide to tensors, focusing on their application in General Relativity.",
+    "filepath": "assets/pdfs/tensors_guide.pdf"
+  },
+  {
+    "title": "The Future of Quantum Computing",
+    "date": "Nov 05, 2025",
+    "summary": "Reviewing the current state of Qubits and error correction.",
+    "filepath": "assets/pdfs/quantum_review.pdf"
+  }
+]
