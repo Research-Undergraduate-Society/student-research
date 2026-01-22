@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematics Society | RUS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">RUS</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn" style="color:var(--accent)">Societies ▾</a>
+                <div class="dropdown-content">
+                    <a href="math.html">Mathematics</a>
+                    <a href="physics.html">Physics</a>
+                </div>
+            </li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="newspaper.html">Newspaper</a></li>
+            <li><a href="faculty.html">Faculty</a></li>
+            <li><a href="index.html#contact" class="contact-btn">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" style="height: 60vh; background-image: linear-gradient(rgba(27,38,59,0.9), rgba(27,38,59,0.9)), url('assets/math-bg.jpg');">
+        <div class="hero-content">
+            <h1>Mathematics Society</h1>
+            <p>Exploring Abstract Structures & Analysis</p>
+        </div>
+    </header>
+
+    <section class="section-pad">
+        <div class="container">
+            <h2>Our Goal</h2>
+            <p class="lead-text">
+                To foster a deep understanding of rigorous mathematics beyond the standard curriculum. 
+                We focus on proving theorems, understanding the "why" behind formulas, and preparing students for graduate-level research.
+            </p>
+        </div>
+    </section>
+
+    <section class="section-pad bg-light">
+        <div class="container">
+            <h2>Recent Discussions</h2>
+            <div class="table-responsive">
+                <table class="academic-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Topic</th>
+                            <th>Output / Summary</th>
+                        </tr>
+                    </thead>
+                    <tbody id="math-discussions">
+                        <tr>
+                            <td>Oct 12, 2025</td>
+                            <td>Topology: Compactness vs Connectedness</td>
+                            <td><a href="#">Read Notes (PDF)</a></td>
+                        </tr>
+                        <tr>
+                            <td>Oct 05, 2025</td>
+                            <td>Linear Algebra: Dual Spaces</td>
+                            <td>Solved Problem Set 4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-pad">
+        <div class="container">
+            <h2>The Team</h2>
+            
+            <div class="president-corner">
+                <div class="profile-img">
+                    <img src="assets/math-president.jpg" alt="President"> </div>
+                <div class="profile-info">
+                    <h3>President Name</h3>
+                    <p class="role">Society President</p>
+                    <p class="bio">Research interest: Algebraic Geometry. Leading the society since 2024.</p>
+                </div>
+            </div>
+
+            <h3 class="sub-header">Active Members</h3>
+            <div id="math-members-grid" class="member-grid">
+                </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>Get Involved</h3>
+                <p>Join the Math Society discussions.</p>
+                <div class="action-links">
+                    <a href="#" class="btn-outline">Join Math Soc</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <p>&copy; 2025 RUS Mathematics Society.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/loader.js"></script>
+    <script>
+        // Specific call for this page
+        loadMembers('data/math_members.json', 'math-members-grid');
+    </script>
+</body>
+</html>
