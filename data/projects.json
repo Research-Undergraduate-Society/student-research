@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Chaos Theory in Double Pendulums",
+    "status": "Ongoing",
+    "team": "Physics & Math",
+    "summary": "Simulating chaotic motion using Python.",
+    "fullDescription": "<p>This project uses Runge-Kutta methods to solve equations of motion. We are currently analyzing the sensitivity to initial conditions.</p><p>Next phase: Building a physical prototype.</p>",
+    "image": "assets/pendulum.jpg"
+  },
+  {
+    "title": "Prime Number Distribution",
+    "status": "Completed",
+    "team": "Math Soc",
+    "summary": "An analysis of gaps between primes.",
+    "fullDescription": "<p>We analyzed the Riemann Zeta function and its implications on prime gaps. Results were presented at the Annual Science Fair.</p>",
+    "image": "assets/math-proj.jpg"
+  }
+]
