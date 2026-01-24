@@ -8,27 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
-    <nav class="navbar">
-        <div class="logo">RUS</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">Societies ▾</a>
-                <div class="dropdown-content">
-                    <a href="math.html">Mathematics</a>
-                    <a href="physics.html">Physics</a>
-                </div>
-            </li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="articles.html" class="active">Articles</a></li>
-            <li><a href="newspaper.html">Newspaper</a></li>
-            <li><a href="faculty.html">Faculty</a></li>
-            <li><a href="index.html#contact" class="contact-btn">Contact</a></li>
-        </ul>
-    </nav>
-
-    <header class="hero" style="height: 50vh; background: var(--primary);">
+    <header class="hero">
         <div class="hero-content">
             <h1>Research Articles</h1>
             <p>Peer-reviewed papers and reviews by our members.</p>
@@ -37,14 +17,12 @@
 
     <section class="section-pad">
         <div class="container">
-            <div id="article-list" class="article-container">
-                </div>
+            <div id="article-list" class="article-container"></div>
         </div>
     </section>
 
+    <script src="js/components.js"></script>
     <script src="js/loader.js"></script>
-    <script>
-        loadArticles('data/articles.json', 'article-list');
-    </script>
+    <script>loadArticles('data/articles.json', 'article-list');</script>
 </body>
 </html>
