@@ -319,3 +319,61 @@ footer {
 }
 
 @keyframes navLinkFade { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
+
+/* --- NEW MEMBER TILES (President Style) --- */
+.member-grid {
+    display: grid;
+    /* Creates 2 columns on desktop, 1 on mobile */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.member-tile {
+    background: white;
+    display: flex; /* Side-by-side layout */
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    border-left: 5px solid var(--accent); /* The Classy Gold Border */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.member-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.member-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #ddd; /* Gray placeholder if image missing */
+    flex-shrink: 0; /* Prevents squishing */
+}
+
+.member-info h4 {
+    color: var(--primary);
+    font-family: var(--font-head);
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.member-info .role {
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+
+.member-info .bio-short {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+}
