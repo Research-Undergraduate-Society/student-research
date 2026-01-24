@@ -377,3 +377,20 @@ footer {
     margin-top: 0.5rem;
     line-height: 1.4;
 }
+
+.art-meta {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    color: #666;
+}
+
+.art-author {
+    font-weight: 700;
+    color: var(--accent); /* Makes the name Gold/Slate */
+}
+
+.art-date {
+    color: #999;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
