@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    
     <header class="hero hero-math">
         <div class="hero-content">
             <h1>Mathematics Society</h1>
@@ -18,7 +19,10 @@
     <section class="section-pad">
         <div class="container">
             <h2>Our Goal</h2>
-            <p class="lead-text">To foster a deep understanding of rigorous mathematics beyond the standard curriculum.</p>
+            <p class="lead-text">
+                To foster a deep understanding of rigorous mathematics beyond the standard curriculum. 
+                We focus on proving theorems, understanding the "why" behind formulas, and preparing students for graduate-level research.
+            </p>
         </div>
     </section>
 
@@ -27,9 +31,24 @@
             <h2>Recent Discussions</h2>
             <div class="table-responsive">
                 <table class="academic-table">
-                    <thead><tr><th>Date</th><th>Topic</th><th>Output / Summary</th></tr></thead>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Topic</th>
+                            <th>Output / Summary</th>
+                        </tr>
+                    </thead>
                     <tbody id="math-discussions">
-                        <tr><td>Oct 12, 2025</td><td>Topology</td><td><a href="#">Read Notes (PDF)</a></td></tr>
+                        <tr>
+                            <td>Oct 12, 2025</td>
+                            <td>Topology: Compactness vs Connectedness</td>
+                            <td><a href="#" class="link-text" style="font-size:0.9rem;">View Notes</a></td>
+                        </tr>
+                        <tr>
+                            <td>Oct 05, 2025</td>
+                            <td>Linear Algebra: Dual Spaces</td>
+                            <td>Solved Problem Set 4</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -39,6 +58,18 @@
     <section class="section-pad">
         <div class="container">
             <h2>The Team</h2>
+
+            <div class="president-corner">
+                <div class="profile-img">
+                    <img src="assets/default-user.jpg" alt="President">
+                </div>
+                <div class="profile-info">
+                    <h3>[President Name]</h3>
+                    <p class="role">Society President</p>
+                    <p class="bio">Research interest: Algebraic Geometry. Leading the society since 2024.</p>
+                </div>
+            </div>
+
             <h3 class="sub-header">Active Members</h3>
             <div id="math-members-grid" class="member-grid"></div>
         </div>
@@ -46,6 +77,9 @@
 
     <script src="js/components.js"></script>
     <script src="js/loader.js"></script>
-    <script>loadMembers('data/math_members.json', 'math-members-grid');</script>
+    <script>
+        // Load the math members from the JSON file
+        loadMembers('data/math_members.json', 'math-members-grid');
+    </script>
 </body>
 </html>
