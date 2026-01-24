@@ -8,27 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <nav class="navbar">
-        <div class="logo">RUS</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropbtn" style="color:var(--accent)">Societies ▾</a>
-                <div class="dropdown-content">
-                    <a href="math.html">Mathematics</a>
-                    <a href="physics.html">Physics</a>
-                </div>
-            </li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="articles.html">Articles</a></li>
-            <li><a href="newspaper.html">Newspaper</a></li>
-            <li><a href="faculty.html">Faculty</a></li>
-            <li><a href="index.html#contact" class="contact-btn">Contact</a></li>
-        </ul>
-    </nav>
-
-    <header class="hero" style="height: 60vh; background-image: linear-gradient(rgba(27,38,59,0.9), rgba(27,38,59,0.9)), url('assets/physics-bg.jpg');">
+    <header class="hero hero-physics">
         <div class="hero-content">
             <h1>Physics Society</h1>
             <p>Where Theory Meets Experiment</p>
@@ -38,79 +18,26 @@
     <section class="section-pad">
         <div class="container">
             <h2>Principle of Work</h2>
-            <div class="split-layout">
-                <div class="text-block">
-                    <h3>How We Work</h3>
-                    <p>We believe in a hands-on approach. Our sessions are divided between theoretical derivation discussions and experimental verification in the lab.</p>
-                </div>
-                <div class="text-block">
-                    <h3>What We Do</h3>
-                    <p>From reproducing classic experiments to simulating complex systems using Python, we bridge the gap between textbook physics and research reality.</p>
-                </div>
-            </div>
+            <p class="lead-text">Bridging textbook physics and research reality.</p>
         </div>
     </section>
 
     <section class="section-pad bg-light">
         <div class="container">
             <h2>The Lab & Showcase</h2>
-            
-            <div class="info-box">
-                <p><strong>Advisor:</strong> Dr. [Advisor Name], Dept. of Physics</p>
-                <p><strong>Schedule:</strong> Every Friday, 5:00 PM @ Lab 304</p>
-            </div>
-
-            <h3 class="sub-header">Recent Output</h3>
-            <ul class="clean-list">
-                <li>
-                    <strong>Project:</strong> <a href="#">Muon Detection using Scintillators</a> (Group Project)
-                </li>
-                <li>
-                    <strong>Article:</strong> <a href="#">Understanding Tensor Calculus for GR</a> (By Student Name)
-                </li>
-            </ul>
+            <div class="info-box"><p><strong>Schedule:</strong> Every Friday, 5:00 PM</p></div>
         </div>
     </section>
 
     <section class="section-pad">
         <div class="container">
             <h2>The Team</h2>
-            
-            <div class="president-corner">
-                <div class="profile-img">
-                    <img src="assets/physics-president.jpg" alt="President">
-                </div>
-                <div class="profile-info">
-                    <h3>President Name</h3>
-                    <p class="role">Society President</p>
-                    <p class="bio">Research interest: Quantum Optics. Focusing on experimental setups.</p>
-                </div>
-            </div>
-
-            <h3 class="sub-header">Active Members</h3>
-            <div id="physics-members-grid" class="member-grid">
-                </div>
+            <div id="physics-members-grid" class="member-grid"></div>
         </div>
     </section>
 
-    <footer id="contact">
-        <div class="container footer-content">
-            <div class="footer-col">
-                <h3>Get Involved</h3>
-                <p>Join the Physics Society lab sessions.</p>
-                <div class="action-links">
-                    <a href="#" class="btn-outline">Join Physics Soc</a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <p>&copy; 2025 RUS Physics Society.</p>
-            </div>
-        </div>
-    </footer>
-
+    <script src="js/components.js"></script>
     <script src="js/loader.js"></script>
-    <script>
-        loadMembers('data/physics_members.json', 'physics-members-grid');
-    </script>
+    <script>loadMembers('data/physics_members.json', 'physics-members-grid');</script>
 </body>
 </html>
