@@ -1,24 +1,26 @@
 [
   {
     "name": "Aarav Sharma",
-    "role": "Senior Researcher",
-    "bio": "Working on Topology.",
-    "image": "assets/member-1.jpg"
+    "role": "Vice President",
+    "bio": "Researching Algebraic Topology.",
+    "image": ""
   },
   {
     "name": "Priya Patel",
     "role": "Treasurer",
     "bio": "Focusing on Number Theory.",
-    "image": "assets/member-2.jpg"
+    "image": ""
   },
   {
     "name": "Rohan Das",
     "role": "General Member",
+    "bio": "Interested in Graph Theory.",
     "image": "" 
   },
   {
     "name": "Aditi Rao",
     "role": "Freshman Rep",
+    "bio": "Learning Real Analysis.",
     "image": ""
   }
 ]
