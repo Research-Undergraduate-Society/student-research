@@ -1,23 +1,29 @@
-/* --- 1. MEMBER LOADER --- */
+/* --- 1. MEMBER LOADER (Updated for Tiles) --- */
 async function loadMembers(jsonPath, containerId) {
     try {
         const response = await fetch(jsonPath);
         const members = await response.json();
         const container = document.getElementById(containerId);
         
-        // Use Fragment for performance (Single DOM reflow)
         const fragment = document.createDocumentFragment();
 
         members.forEach(member => {
             const card = document.createElement('div');
-            card.className = 'member-card';
+            card.className = 'member-tile'; // Use the new class
             
-            // Create inner text node safely
-            const nameDiv = document.createElement('div');
-            nameDiv.className = 'member-name';
-            nameDiv.textContent = member;
+            // Handle missing images with a default placeholder
+            const imgSrc = member.image || 'assets/default-user.jpg'; 
+            const role = member.role || 'Member'; // Default role
             
-            card.appendChild(nameDiv);
+            card.innerHTML = `
+                <img src="${imgSrc}" alt="${member.name}" class="member-photo">
+                <div class="member-info">
+                    <h4>${member.name}</h4>
+                    <p class="role">${role}</p>
+                    ${member.bio ? `<p class="bio-short">${member.bio}</p>` : ''}
+                </div>
+            `;
+            
             fragment.appendChild(card);
         });
 
