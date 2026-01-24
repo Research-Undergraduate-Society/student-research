@@ -1,1 +1,24 @@
-["Aarav Sharma", "Priya Patel", "Rohan Das", "Vikram Singh", "Aditi Rao", "Suresh Raina", "Meera Iyer", "Kabir Bedi", "Zara Khan", "Ishaan Khatter", "Nikhil Kumar", "Ojaswi Gupta", "Pranav Mistry", "Queen Mary", "Rahul Dravid"]
+[
+  {
+    "name": "Aarav Sharma",
+    "role": "Senior Researcher",
+    "bio": "Working on Topology.",
+    "image": "assets/member-1.jpg"
+  },
+  {
+    "name": "Priya Patel",
+    "role": "Treasurer",
+    "bio": "Focusing on Number Theory.",
+    "image": "assets/member-2.jpg"
+  },
+  {
+    "name": "Rohan Das",
+    "role": "General Member",
+    "image": "" 
+  },
+  {
+    "name": "Aditi Rao",
+    "role": "Freshman Rep",
+    "image": ""
+  }
+]
