@@ -320,6 +320,59 @@ footer {
 
 @keyframes navLinkFade { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
 
+/* --- PRESIDENT CORNER (Specific Style) --- */
+.president-corner {
+    background: white;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    border: 1px solid #e0e0e0;
+    border-left: 6px solid var(--primary); /* Midnight Blue Border for President */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-bottom: 3rem; /* Space between President and Members */
+    border-radius: 4px;
+}
+
+.president-corner .profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #ddd;
+    overflow: hidden;
+    flex-shrink: 0; /* Prevents image from squishing */
+}
+
+.president-corner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.president-corner .profile-info h3 {
+    font-family: var(--font-head);
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.president-corner .role {
+    color: var(--accent);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* Mobile Fix for President Corner */
+@media screen and (max-width: 768px) {
+    .president-corner {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 /* --- NEW MEMBER TILES (President Style) --- */
 .member-grid {
     display: grid;
