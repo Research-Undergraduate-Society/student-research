@@ -30,24 +30,38 @@ const navHTML = `
 
 const footerHTML = `
 <footer id="contact">
-    <div class="container footer-content">
+    <div class="footer-content">
         <div class="footer-col">
-            <h3>Get Involved</h3>
-            <p>Ready to research? Use the links below.</p>
+            <h3>Join the Research</h3>
+            <p>Ready to move beyond the textbook? Applications are open for the Spring 2026 semester.</p>
             <div class="action-links">
-                <a href="#" target="_blank" class="btn-outline">Join the Team (Form)</a>
-                <a href="#" target="_blank" class="btn-outline">Submit Article (Form)</a>
+                <a href="#" target="_blank" class="footer-btn">Apply for Membership &rarr;</a>
+                <a href="#" target="_blank" class="footer-btn">Submit an Article &rarr;</a>
             </div>
         </div>
         
         <div class="footer-col">
             <h3>Contact Us</h3>
-            <p>Email: <a href="mailto:contact@rus-college.edu">contact@rus-college.edu</a></p>
-            <p>Location: Undergraduate Campus, Science Block A</p>
+            <p style="margin-bottom: 0.5rem;"><strong>Email:</strong></p>
+            <p><a href="mailto:contact@rus-college.edu">contact@rus-college.edu</a></p>
+            
+            <p style="margin-top: 1.5rem; margin-bottom: 0.5rem;"><strong>Lab Location:</strong></p>
+            <p>Undergraduate Campus,<br>Science Block A, Room 304<br>Rourkela, Odisha</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Society Links</h3>
+            <ul style="line-height: 2; font-size: 0.95rem;">
+                <li><a href="math.html">Mathematics Society</a></li>
+                <li><a href="physics.html">Physics Society</a></li>
+                <li><a href="projects.html">Archive & Projects</a></li>
+                <li><a href="faculty.html">Faculty Mentors</a></li>
+            </ul>
         </div>
     </div>
+
     <div class="copyright">
-        <p>&copy; 2025 Research Undergraduate Society. All rights reserved.</p>
+        <p>&copy; 2025 Research Undergraduate Society. Bridging Curiosity and Discovery.</p>
     </div>
 </footer>
 `;
