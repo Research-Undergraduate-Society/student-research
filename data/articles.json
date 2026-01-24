@@ -1,14 +1,23 @@
 [
   {
-    "title": "Introduction to Tensor Calculus",
-    "date": "Dec 10, 2025",
-    "summary": "A beginner-friendly guide to tensors, focusing on their application in General Relativity.",
-    "filepath": "assets/pdfs/tensors_guide.pdf"
+    "title": "Consequences of the Lorentz Transformation",
+    "author": "Arnav Wadalkar",
+    "date": "Aug 03, 2025",
+    "summary": "Exploring how Simultaneity, Causality, Length Contraction, and Time Dilation are altered under relativistic physics.",
+    "filepath": "assets/pdfs/consequences_relativity.pdf"
   },
   {
-    "title": "The Future of Quantum Computing",
-    "date": "Nov 05, 2025",
-    "summary": "Reviewing the current state of Qubits and error correction.",
-    "filepath": "assets/pdfs/quantum_review.pdf"
+    "title": "Foundations of Analytical Mechanics",
+    "author": "Shaik Mytheensha",
+    "date": "Aug 02, 2025",
+    "summary": "A discussion on generalised coordinates, constraints, virtual work, and D'Alembert's principle.",
+    "filepath": "assets/pdfs/analytical_mechanics.pdf"
+  },
+  {
+    "title": "The Lorentz Transformation",
+    "author": "Kalamata Chaitanya",
+    "date": "Jul 27, 2025",
+    "summary": "A detailed derivation from Einstein's postulates and a look at the transition from Aether theory to Special Relativity.",
+    "filepath": "assets/pdfs/lorentz_transformation.pdf"
   }
 ]
