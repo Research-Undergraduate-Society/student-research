@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-/* --- 3. ARTICLE LOADER --- */
+/* --- 3. ARTICLE LOADER (Updated with Author) --- */
 async function loadArticles(jsonPath, containerId) {
     try {
         const response = await fetch(jsonPath);
@@ -105,9 +105,13 @@ async function loadArticles(jsonPath, containerId) {
             item.href = art.filepath;
             item.setAttribute('download', '');
             
+            // Added the "art-meta" line to show Author and Date together
             item.innerHTML = `
                 <div class="art-title">${art.title}</div>
-                <div class="art-date">${art.date}</div>
+                <div class="art-meta">
+                    <span class="art-author">By ${art.author}</span>
+                    <span class="art-date"> • ${art.date}</span>
+                </div>
                 <div class="art-summary">${art.summary}</div>
                 <div class="download-icon">↓ Download PDF</div>
             `;
